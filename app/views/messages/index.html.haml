@@ -8,14 +8,35 @@
         .side-header__box
           %p.side-header__box__user-name HIROKO
           %ul.side-header__box__menu
-            %li.side-header__box__menu__--new-group
-        %side-header__box__menu__--edit-user
-    %groups
-  %chat-main
-    %main-header
-      %main-header__left-box
-      -# a href = ""
-    %messages
-    -# 続けてメッセージが出る感じ
-    %form
-      -# form class?
+            %li.side-header__box__menu__new-group
+            %a{:href => "#"}
+            = link_to "#" do
+              = fa_icon 'edit'
+            %li.side-header__box__menu__edit-user
+            = link_to "#" do
+              = fa_icon 'cog'
+      .groups
+        .group
+          %p.group__group-name general
+          %p.group__latest-message こんにちは
+
+    .chat-main
+      .main-header
+        .main-header__left-box
+          %h2.main-header__left-box__current-group general
+          %ul.main-header__left-box__member-list Member: 
+        %a{:href => "#"}
+          .main-header__edit-btn Edit
+      
+      .messages
+        .message
+          .message__upper-info
+            %p.message__upper-info__talker HIROKO
+            %p.message__upper-info__date 2019/09/21(Sat) 16:05:47
+          %p.message__text こんにちは
+      -# .form
+      -#   .new-message
+      -#   .input-box type a message
+      -#     .input-box__image
+      -#   .submit-btn
+
