@@ -34,9 +34,13 @@
             %p.message__upper-info__talker HIROKO
             %p.message__upper-info__date 2019/09/21(Sat) 16:05:47
           %p.message__text こんにちは
-      -# .form
-      -#   .new-message
-      -#   .input-box type a message
-      -#     .input-box__image
-      -#   .submit-btn
+      .form
+        -# %form#new_message.new_message
+        -#   %input
+        -#   %input
+        -#     .input-box type a message
+        -#       %input#message_content.input-box__text
+        -#       %label.input-box__image
+        -#         %i.fa.fa-image
+        -#         %input#message_image.input-box__image__file
 
