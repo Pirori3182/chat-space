@@ -142,6 +142,50 @@
     }
   }
   .form{
-    
+    background-color: #ddd;
+    height: 90px;
+    padding: 20px 40px;
+
+    %form#new_message.new_message{
+      display: flex;
+
+      .input-box{
+        position: relative;
+        width: 100%;
+        
+        %input#message_content.input-box__text{
+          color: #434a54;
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          border-style: none;
+        }
+        %label.input-box__image{
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+
+          %i.fa.fa-image{
+          
+          }
+          %input#message_image.input-box__image__file{
+            display: none;
+          }
+          
+        }
+      }
+      %input.submit-btn{
+        width: 100px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
+      
+      }
+    }
   }
 }
