@@ -25,13 +25,13 @@
       width: 100%;
       font-weight: bold;
 
-      ul.side-header__box__menu{
+      &__menu{
         display: flex;
         
-        li.side-header__box__menu__new-group{
+        &__new-group{
           margin-left: 0.3rem;
         }
-        li.side-header__box__menu__edit-user{
+        &__edit-user{
           margin-left: 0.3rem;
         }
       }
@@ -47,12 +47,12 @@
     .group{
       margin-bottom: 40px;
 
-      p.group__group-name{
+      &__group-name{
         font-size: 15px;
         margin-bottom: 5px;
       }
 
-      p.group__latest-message{
+      &__latest-message{
         font-size: 11px;
       }
     }
@@ -75,13 +75,13 @@
     &__left-box{
       margin-top: 35px;
 
-      h2.main-header__left-box__current-group{
+      &__current-group{
         font-size: 20px;
         color: #333;
         margin-bottom: 15px;
       }
 
-      ul.main-header__left-box__member-list{
+      &__member-list{
         display: flex;
         font-size: 12px;
         color: #999999;
@@ -115,13 +115,13 @@
         display: flex;
         margin-bottom: 10px;
 
-        p.message__upper-info__talker{
+        &__talker{
           font-size: 16px;
           font-weight: bold;
           color: #434A54;
           
         }
-        p.message__upper-info__date{
+        &__date{
           margin-left: 10px;
           font-size: 12px;
           color: #999999;
@@ -146,21 +146,21 @@
         position: relative;
         width: 100%;
         
-        input#message_content.input-box__text{
+        &__text#message_content{
           color: #434a54;
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
           border-style: none;
         }
-        label.input-box__image{
+        &__image{
           font-size: 1.3rem;
           position: absolute;
           top: 10px;
           right: 10px;
           cursor: pointer;
-
-          input#message_image.input-box__image__file{
+          
+          &__file#message_image{
             display: none;
           }
           
@@ -174,7 +174,6 @@
         background-color: #38aef0;
         color: white;
         cursor: pointer;
-      
       }
     }
   }
