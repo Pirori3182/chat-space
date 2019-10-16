@@ -7,9 +7,6 @@
   background-color: #38AEF0;
 }
 
-// .wrapper{
-// }
-
 .chat-side{
   width: 300px;
   float: left;
@@ -28,15 +25,11 @@
       width: 100%;
       font-weight: bold;
 
-      // &__user-name{
-      // }
-
       ul.side-header__box__menu{
         display: flex;
         
         li.side-header__box__menu__new-group{
           margin-left: 0.3rem;
-          
         }
         li.side-header__box__menu__edit-user{
           margin-left: 0.3rem;
@@ -79,7 +72,7 @@
     border-bottom: solid 1px #eee;
     overflow: scroll;
 
-    .main-header__left-box{
+    &__left-box{
       margin-top: 35px;
 
       h2.main-header__left-box__current-group{
@@ -167,9 +160,6 @@
           right: 10px;
           cursor: pointer;
 
-          i.fa.fa-image{
-          
-          }
           input#message_image.input-box__image__file{
             display: none;
           }
