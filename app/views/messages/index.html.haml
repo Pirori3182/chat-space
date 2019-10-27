@@ -29,11 +29,7 @@
           .main-header__edit-btn Edit
       
       .messages
-        .message
-          .message__upper-info
-            %p.message__upper-info__talker HIROKO
-            %p.message__upper-info__date 2019/09/21(Sat) 16:05:47
-          %p.message__text こんにちは
+        = render partial: 'message', collection: @messages
       .form
         = form_for [@group, @message] do |f|
           = f.text_field :content, class: 'form__message', placeholder: 'type a message'
