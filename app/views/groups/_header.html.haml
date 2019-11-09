@@ -1,6 +1,8 @@
 .main-header
   .main-header__left-box
-    %h2.main-header__left-box__current-group general
-    %ul.main-header__left-box__member-list Member: 
+    %h2.main-header__left-box__current-group
+      = @group.name
+    %ul.main-header__left-box__member-list 
+      = @group.name
   = link_to edit_group_path(@group) do
     .main-header__edit-btn Edit
