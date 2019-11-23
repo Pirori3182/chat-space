@@ -21,16 +21,16 @@ $(function(){
   return html;
   }
   function scrollBottom(message){
-    var target = $('.message').last();
+    var target = $('.message').last();  //この時の.messageは_message.html.hamlであってる？
     var position = target.offset().top + $('.messages').scrollTop();
     $('.messages').animate({
       scrollTop: position
     }, 300, 'swing');
   }
   $('#new_message').on('submit' , function(e){
-    e.preventDefault(); //フォーム送信の同期通信のイベントをキャンセルさせるために書いています。
+    e.preventDefault(); //フォーム送信の同期通信のイベントをキャンセルさせるために書いている。
     var formData = new FormData(this);  //フォームに入力した値を取得。var message?
-    var url = $(this).attr('action'); //?POSTリクエストを送りたいルーティング
+    var url = $(this).attr('action'); //POSTリクエストを送りたいルーティング？
     $.ajax({
       url: url, //同期通信でいう『パス』
       type: "POST", //同期通信でいう『HTTPメソッド』

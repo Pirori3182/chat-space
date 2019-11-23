@@ -11,6 +11,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    return nil if params[:keyword] == "" #params[:keyword]に値が入っていれば処理を続け、空の場合は処理を終える
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10) # whereメソッドで入力された値を含むかつログインしているユーザーのidは除外
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
 
   def user_params
